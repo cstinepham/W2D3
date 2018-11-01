@@ -3,7 +3,7 @@ require 'card'
 class Deck
   attr_reader :cards
   def initialize
-    @cards = make_deck
+    @cards = Deck.make_deck
 
   end
 
@@ -18,7 +18,7 @@ class Deck
   end
 
   protected
-  def make_deck
+  def self.make_deck
     cards = []
     values = %w(2 3 4 5 6 7 8 9 10 J Q K A)
     suits = [:H, :D , :C, :S]
